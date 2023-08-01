@@ -10,7 +10,7 @@ import logging
 
 load_dotenv()
 
-logging.basicConfig(filename='monster_canada.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='logs/monster_canada.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 url = "https://appsapi.monster.io/jobs-svx-service/v2/monster/search-jobs/samsearch/en-CA?apikey=AE50QWejwK4J73X1y1uNqpWRr2PmKB3S"
 
