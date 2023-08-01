@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 import os
 import random
 import re
+import logging
 
 load_dotenv()
+
+logging.basicConfig(filename='monster_france.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 url = "https://appsapi.monster.io/jobs-svx-service/v2/monster/search-jobs/samsearch/fr-FR?apikey=AE50QWejwK4J73X1y1uNqpWRr2PmKB3S"
 
@@ -139,11 +142,14 @@ for job in job_results:
 
         if cur.rowcount:
             print(f'Job Title: {title} added to the database.')
+            logging.info(f'Job Title: {title} added to the database.')
         else:
             print(f'Job Title: {title} already existed in the database.')
+            logging.info(f'Job Title: {title} already existed in the database.')
 
     except Error as e:
         print(f'Failed to add Job Title: {title} to the database. Error: {str(e)}')
+        logging.error(f'Failed to add Job Title: {title} to the database. Error: {str(e)}')
 
 cur.close()
 conn.close()
