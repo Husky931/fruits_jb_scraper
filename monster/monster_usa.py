@@ -10,7 +10,7 @@ import logging
 
 load_dotenv()
 
-logging.basicConfig(filename='logs/monster_usa.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='/home/ubuntu/fruits_jb_scraper/monster/logs/uk_farmworker.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 url = "https://appsapi.monster.io/jobs-svx-service/v2/monster/search-jobs/samsearch/en-US?apikey=AE50QWejwK4J73X1y1uNqpWRr2PmKB3S"
 
@@ -48,8 +48,8 @@ headers = {
     "Accept-Encoding": "gzip, deflate, br",
     "Accept-Language": "en-US,en;q=0.9,mk;q=0.8,hr;q=0.7",
     "Content-Type": "application/json; charset=UTF-8",
-    "Origin": "https://www.monster.de",
-    "Referer": "https://www.monster.de/jobs/suche?q=Obstpfl%C3%BCcker&where=&page=1&so=m.s.sh",
+    "Origin": "https://www.monster.com",
+    "Referer": "https://www.monster.com/jobs/search?q=farm+worker&where=&page=14&so=m.s.sh",
     "Sec-Ch-Ua": sec_ch_ua,
     "Sec-Ch-Ua-Mobile": "?0",
     "Sec-Ch-Ua-Platform": selected_agent['platform'],
